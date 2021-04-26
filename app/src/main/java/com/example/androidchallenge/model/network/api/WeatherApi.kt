@@ -1,6 +1,6 @@
-package com.example.androidchallenge.network.api
+package com.example.androidchallenge.model.network.api
 
-import com.example.androidchallenge.network.models.WeatherData
+import com.example.androidchallenge.model.network.datamodel.WeatherData
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

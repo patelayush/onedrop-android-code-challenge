@@ -1,4 +1,4 @@
-package com.example.androidchallenge.network.models
+package com.example.androidchallenge.model.network.datamodel
 
 data class WeatherData(
     val lat: Double,
