@@ -17,11 +17,11 @@ Using [OpenWeather's REST API](https://openweathermap.org/api) to build an Andro
 4. When a user clicks anywhere on the screen, we show the user 7-day forecast weather in details screen. Details screen contains information such as date, temperature range and short description.
 5. User can come back to the main screen anytime using back button functionality.
 
-## Note to Testers
+#### Note to Testers -
 1. At present, "one call api" is returning same date for next 8 days forecast in "daily" object. That's the reason you will find same date in details screen.
 2. Also, api doen't return location object, thus I am using GeoDecoder(Android library) to fetch the location name from latitude and longitude.
 
-## Future Work -
+#### Future Work -
 1. Implementing unit test for verifying network calls.
 2. Beautifying layout with more details to show.
 3. Using location listener, instead of getLastKnownLocation, to update the user's location more precisely and fetch the lat and long from that.
