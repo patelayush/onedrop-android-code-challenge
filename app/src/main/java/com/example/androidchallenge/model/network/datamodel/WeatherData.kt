@@ -1,29 +1,51 @@
 package com.example.androidchallenge.model.network.datamodel
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class WeatherData(
     val lat: Double,
     val lon: Double,
     val timezone: String,
-    val current: CurrentWeather
-)
+    val current: CurrentWeather,
+    val daily:List<DailyWeather>
+) : Parcelable
 
+@Parcelize
 data class CurrentWeather(
     val dt: Long,
     val sunrise: Long,
     val sunset: Long,
     val temp: Double,
-    val feelsLike: Double,
+    val feels_like: Double,
+    val wind_speed: Double,
     val pressure: Int,
     val humidity: Int,
     val weather: List<Weather>
-)
+) : Parcelable
 
+@Parcelize
+data class DailyWeather(
+    val dt: Long,
+    val sunrise: Long,
+    val temp:Temp,
+    val weather: List<Weather>
+) : Parcelable
+
+@Parcelize
+data class Temp(
+    val min:Double,
+    val max:Double
+) : Parcelable
+
+@Parcelize
 data class Weather(
     val id: Int,
     val main: String,
     val description: String,
     val icon: String
-)
+) : Parcelable
 
 
 /*
